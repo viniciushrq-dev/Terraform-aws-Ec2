@@ -10,3 +10,9 @@ variable "ami_id" {
   description = "Amazon Linux 2 Kernel"
   default     = "ami-00364246766d8b7c0"
 }
+
+variable "vpc_id" {
+  description = "VPC ID"
+  type = string
+}
+  
