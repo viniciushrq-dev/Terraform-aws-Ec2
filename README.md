@@ -1,60 +1,31 @@
-Terraform EC2 - Criando uma Instância na AWS
-Este projeto utiliza o Terraform para criar e gerenciar uma instância EC2 na AWS.
+# 🚀 Deploy de uma Instância EC2 com Terraform na AWS
 
-Pré-requisitos
-Antes de executar o projeto, certifique-se de que você tenha:
+Este projeto cria uma infraestrutura simples na AWS utilizando Terraform. Ele provisiona:
 
-Terraform instalado na sua máquina.
+- Uma VPC personalizada
+- Uma Subnet pública
+- Uma instância EC2 na região **sa-east-1 (São Paulo)**
 
-Uma conta na AWS com as permissões necessárias para criar recursos EC2.
+## 🔧 Tecnologias utilizadas
 
-Chaves de acesso da AWS configuradas no seu ambiente (via AWS CLI ou variáveis de ambiente).
+- Terraform
+- AWS
 
-Como utilizar
-Clone o repositório:
+## 📦 Recursos criados
 
-bash
-Copiar
-Editar
-git clone https://github.com/viniciushrq-dev/Terraform-aws-Ec2.git
-cd Terraform-aws-Ec2
-Configure suas credenciais da AWS: Se você não configurou ainda, utilize o comando abaixo para configurar a AWS CLI:
+- VPC (`10.0.0.0/16`)
+- Subnet pública (`10.0.1.0/24`)
+- Instância EC2 (`t3.micro`)
 
-bash
-Copiar
-Editar
-aws configure
-Inicie o Terraform:
+## 📜 Pré-requisitos
 
-Para iniciar, você precisa inicializar o projeto com o Terraform:
+- Conta na AWS
+- Terraform instalado na sua máquina
+- AWS CLI configurado com suas credenciais (`aws configure`)
 
-bash
-Copiar
-Editar
-terraform init
-Verifique o que será criado: Antes de aplicar as mudanças, você pode rodar o seguinte comando para verificar o plano de execução:
+## 🚀 Como utilizar
 
-bash
-Copiar
-Editar
-terraform plan
-Aplique a configuração: Para criar a instância EC2 na AWS, execute:
+1. Clone o repositório:
 
-bash
-Copiar
-Editar
-terraform apply
-Confirme a execução digitando yes quando solicitado.
-
-Destrua os recursos (opcional): Quando você não precisar mais da instância, pode destruir os recursos com o comando:
-
-bash
-Copiar
-Editar
-terraform destroy
-Estrutura do Projeto
-main.tf: Contém a configuração principal para a criação da instância EC2.
-
-variables.tf: Define as variáveis usadas para personalizar a instância.
-
-outputs.tf: Exibe as saídas, como o endereço IP da instância EC2 criada.
+git clone https://github.com/viniciushrq-dev/Terraform-aws-Ec2
+cd nome-do-repositorio
